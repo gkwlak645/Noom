@@ -44,7 +44,7 @@ const sockets = [];
 wss.on("connection", (socket) => {
     socket["nickname"] = "Unknown";
     sockets.push(socket);
-    console.log("Connected to Browser ⭕");
+    console.log("Connected to Browsers ⭕");
     socket.on("close", () => console.log("Disconnected from Browser ❌"));
     socket.on("message", (msg) => {
         const message = JSON.parse(msg);
